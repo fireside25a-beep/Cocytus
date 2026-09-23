@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="1040" viewBox="0 0 1720 1040">
+<title>Cocytus 0.2 release gate</title>
+<rect width="100%" height="100%" fill="#050505"/>
+<style>
+.text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#eeeeee; }
+.dim { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#9b9b9b; }
+.line { stroke:#d8d8d8; stroke-width:3; fill:none; shape-rendering:crispEdges; }
+.thin { stroke:#666; stroke-width:1; fill:none; shape-rendering:crispEdges; }
+.box { stroke:#d8d8d8; stroke-width:3; fill:#050505; }
+.pending { stroke:#777; stroke-width:3; fill:#050505; stroke-dasharray:12 8; }
+</style>
+<text x="60" y="70" font-size="38" class="text" text-anchor="start" font-weight="bold">COCYTUS 0.2.0 // RELEASE GATE</text>
+<text x="60" y="108" font-size="20" class="dim" text-anchor="start" font-weight="normal">0.1 machine evidence preserved; self-hosting is not claimed early</text>
+<rect x="60" y="150" width="1600" height="793" class="box"/>
+<text x="80" y="190" font-size="21" class="dim" text-anchor="start" font-weight="normal">CHECK</text>
+<text x="940" y="190" font-size="21" class="dim" text-anchor="start" font-weight="normal">WITNESS</text>
+<text x="1370" y="190" font-size="21" class="dim" text-anchor="start" font-weight="normal">STATUS</text>
+<line x1="60" y1="211" x2="1660" y2="211" class="thin"/>
+<text x="80" y="250" font-size="20" class="text" text-anchor="start" font-weight="normal">exact-dyadic property cases</text>
+<text x="940" y="250" font-size="20" class="text" text-anchor="start" font-weight="normal">321,084</text>
+<text x="1370" y="250" font-size="20" class="text" text-anchor="start" font-weight="bold">PASS</text>
+<line x1="60" y1="272" x2="1660" y2="272" class="thin"/>
+<text x="80" y="311" font-size="20" class="text" text-anchor="start" font-weight="normal">Antenora reversible mappings</text>
+<text x="940" y="311" font-size="20" class="text" text-anchor="start" font-weight="normal">256 / 256</text>
+<text x="1370" y="311" font-size="20" class="text" text-anchor="start" font-weight="bold">PASS</text>
+<line x1="60" y1="333" x2="1660" y2="333" class="thin"/>
+<text x="80" y="372" font-size="20" class="text" text-anchor="start" font-weight="normal">Ptolomaea call / return</text>
+<text x="940" y="372" font-size="20" class="text" text-anchor="start" font-weight="normal">end-to-end</text>
+<text x="1370" y="372" font-size="20" class="text" text-anchor="start" font-weight="bold">PASS</text>
+<line x1="60" y1="394" x2="1660" y2="394" class="thin"/>
+<text x="80" y="433" font-size="20" class="text" text-anchor="start" font-weight="normal">Judecca exact-freeze</text>
+<text x="940" y="433" font-size="20" class="text" text-anchor="start" font-weight="normal">declared budget</text>
+<text x="1370" y="433" font-size="20" class="text" text-anchor="start" font-weight="bold">PASS</text>
+<line x1="60" y1="455" x2="1660" y2="455" class="thin"/>
+<text x="80" y="494" font-size="20" class="text" text-anchor="start" font-weight="normal">Judecca negative cases</text>
+<text x="940" y="494" font-size="20" class="text" text-anchor="start" font-weight="normal">undeclared / N+1 / redeclare</text>
+<text x="1370" y="494" font-size="20" class="text" text-anchor="start" font-weight="bold">PASS</text>
+<line x1="60" y1="516" x2="1660" y2="516" class="thin"/>
+<text x="80" y="555" font-size="20" class="text" text-anchor="start" font-weight="normal">Caina frame / final image</text>
+<text x="940" y="555" font-size="20" class="text" text-anchor="start" font-weight="normal">byte-identical</text>
+<text x="1370" y="555" font-size="20" class="text" text-anchor="start" font-weight="bold">PASS</text>
+<line x1="60" y1="577" x2="1660" y2="577" class="thin"/>
+<text x="80" y="616" font-size="20" class="text" text-anchor="start" font-weight="normal">native compiler source</text>
+<text x="940" y="616" font-size="20" class="text" text-anchor="start" font-weight="normal">compiler.coc</text>
+<text x="1370" y="616" font-size="20" class="text" text-anchor="start" font-weight="bold">REQUIRED 0.2</text>
+<line x1="60" y1="638" x2="1660" y2="638" class="thin"/>
+<text x="80" y="677" font-size="20" class="text" text-anchor="start" font-weight="normal">stage-1 compiler</text>
+<text x="940" y="677" font-size="20" class="text" text-anchor="start" font-weight="normal">C1 = C0(S)</text>
+<text x="1370" y="677" font-size="20" class="text" text-anchor="start" font-weight="bold">REQUIRED 0.2</text>
+<line x1="60" y1="699" x2="1660" y2="699" class="thin"/>
+<text x="80" y="738" font-size="20" class="text" text-anchor="start" font-weight="normal">stage-2 compiler</text>
+<text x="940" y="738" font-size="20" class="text" text-anchor="start" font-weight="normal">C2 = C1(S)</text>
+<text x="1370" y="738" font-size="20" class="text" text-anchor="start" font-weight="bold">REQUIRED 0.2</text>
+<line x1="60" y1="760" x2="1660" y2="760" class="thin"/>
+<text x="80" y="799" font-size="20" class="text" text-anchor="start" font-weight="normal">stage-3 compiler</text>
+<text x="940" y="799" font-size="20" class="text" text-anchor="start" font-weight="normal">C3 = C2(S)</text>
+<text x="1370" y="799" font-size="20" class="text" text-anchor="start" font-weight="bold">REQUIRED 0.2</text>
+<line x1="60" y1="821" x2="1660" y2="821" class="thin"/>
+<text x="80" y="860" font-size="20" class="text" text-anchor="start" font-weight="normal">self-host fixed point</text>
+<text x="940" y="860" font-size="20" class="text" text-anchor="start" font-weight="normal">bytes(C2) == bytes(C3)</text>
+<text x="1370" y="860" font-size="20" class="text" text-anchor="start" font-weight="bold">PENDING PROOF</text>
+<line x1="60" y1="882" x2="1660" y2="882" class="thin"/>
+<text x="80" y="921" font-size="20" class="text" text-anchor="start" font-weight="normal">hash witness</text>
+<text x="940" y="921" font-size="20" class="text" text-anchor="start" font-weight="normal">SHA256(C2) == SHA256(C3)</text>
+<text x="1370" y="921" font-size="20" class="text" text-anchor="start" font-weight="bold">PENDING PROOF</text>
+<text x="60" y="1008" font-size="23" class="dim" text-anchor="start" font-weight="normal">The release may be unpleasant.  The proof may not be imaginary.</text>
+</svg>

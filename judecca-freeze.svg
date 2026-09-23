@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="830" viewBox="0 0 1720 830">
+<title>Judecca finite-access memory</title>
+<rect width="100%" height="100%" fill="#050505"/>
+<style>
+.text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#eeeeee; }
+.dim { fill:#a8a8a8; }
+.line { stroke:#d8d8d8; stroke-width:3; fill:none; shape-rendering:crispEdges; }
+.box { stroke:#d8d8d8; stroke-width:3; fill:#050505; }
+.grid { stroke:#333; stroke-width:1; }
+.pass { fill:#eeeeee; }
+</style>
+<text x="60" y="70" font-size="38" class="text" text-anchor="start" font-weight="bold">JUDECCA // FINITE-ACCESS MUTABLE STATE</text>
+<text x="60" y="110" font-size="24" class="text" text-anchor="start" font-weight="normal">judecca ADDRESS COUNT</text>
+<line x1="170" y1="380" x2="410" y2="380" class="line"/>
+<rect x="128" y="338" width="84" height="84" class="box"/>
+<text x="170" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">1</text>
+<line x1="410" y1="380" x2="650" y2="380" class="line"/>
+<rect x="368" y="338" width="84" height="84" class="box"/>
+<text x="410" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">2</text>
+<line x1="650" y1="380" x2="890" y2="380" class="line"/>
+<rect x="608" y="338" width="84" height="84" class="box"/>
+<text x="650" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">3</text>
+<line x1="890" y1="380" x2="1130" y2="380" class="line"/>
+<rect x="848" y="338" width="84" height="84" class="box"/>
+<text x="890" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">...</text>
+<line x1="1130" y1="380" x2="1370" y2="380" class="line"/>
+<rect x="1088" y="338" width="84" height="84" class="box"/>
+<text x="1130" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">N-1</text>
+<line x1="1370" y1="380" x2="1570" y2="380" class="line"/>
+<rect x="1328" y="338" width="84" height="84" class="box"/>
+<text x="1370" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">N</text>
+<rect x="1528" y="338" width="84" height="84" class="box"/>
+<text x="1570" y="389" font-size="25" class="text" text-anchor="middle" font-weight="bold">N+1</text>
+<text x="170" y="500" font-size="18" class="dim" text-anchor="middle" font-weight="normal">PERMIT</text>
+<text x="410" y="500" font-size="18" class="dim" text-anchor="middle" font-weight="normal">PERMIT</text>
+<text x="650" y="500" font-size="18" class="dim" text-anchor="middle" font-weight="normal">PERMIT</text>
+<text x="890" y="500" font-size="18" class="dim" text-anchor="middle" font-weight="normal">PERMIT</text>
+<text x="1130" y="500" font-size="18" class="dim" text-anchor="middle" font-weight="normal">PERMIT</text>
+<text x="1370" y="500" font-size="20" class="text" text-anchor="middle" font-weight="bold">FREEZE</text>
+<text x="1570" y="500" font-size="20" class="text" text-anchor="middle" font-weight="bold">FAULT</text>
+<text x="60" y="635" font-size="25" class="text" text-anchor="start" font-weight="normal">access N: permitted and permanently freezes ADDRESS</text>
+<text x="60" y="685" font-size="25" class="text" text-anchor="start" font-weight="normal">access N+1: fault</text>
+<text x="60" y="760" font-size="28" class="dim" text-anchor="start" font-weight="normal">mutable memory is finite in patience.</text>
+</svg>

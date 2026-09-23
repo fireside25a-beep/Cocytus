@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="830" viewBox="0 0 1720 830">
+<title>Finite Conway cut</title>
+<rect width="100%" height="100%" fill="#050505"/>
+<style>
+.text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#eeeeee; }
+.dim { fill:#a8a8a8; }
+.line { stroke:#d8d8d8; stroke-width:3; fill:none; shape-rendering:crispEdges; }
+.box { stroke:#d8d8d8; stroke-width:3; fill:#050505; }
+.grid { stroke:#333; stroke-width:1; }
+.pass { fill:#eeeeee; }
+</style>
+<text x="60" y="70" font-size="38" class="text" text-anchor="start" font-weight="bold">FINITE CONWAY CUT // { L | R }</text>
+<text x="60" y="110" font-size="20" class="dim" text-anchor="start" font-weight="normal">valid only when every left option is strictly below every right option</text>
+<rect x="695" y="300" width="330" height="120" rx="0" class="box"/>
+<text x="860.0" y="338" font-size="28" class="text" text-anchor="middle" font-weight="bold">x = { L | R }</text>
+<text x="860.0" y="370" font-size="20" class="dim" text-anchor="middle" font-weight="normal">birthday b(x)</text>
+<rect x="120" y="220" width="220" height="90" rx="0" class="box"/>
+<text x="230.0" y="258" font-size="28" class="text" text-anchor="middle" font-weight="bold">L0</text>
+<text x="230.0" y="290" font-size="20" class="dim" text-anchor="middle" font-weight="normal">left option</text>
+<path d="M340,265 L695,360 M695,360 L681.8,364.5 M695,360 L685.8,349.5" class="line"/>
+<rect x="120" y="390" width="220" height="90" rx="0" class="box"/>
+<text x="230.0" y="428" font-size="28" class="text" text-anchor="middle" font-weight="bold">L1</text>
+<text x="230.0" y="460" font-size="20" class="dim" text-anchor="middle" font-weight="normal">left option</text>
+<path d="M340,435 L695,360 M695,360 L685.2,370.0 M695,360 L682.0,354.8" class="line"/>
+<rect x="120" y="560" width="220" height="90" rx="0" class="box"/>
+<text x="230.0" y="598" font-size="28" class="text" text-anchor="middle" font-weight="bold">L2</text>
+<text x="230.0" y="630" font-size="20" class="dim" text-anchor="middle" font-weight="normal">left option</text>
+<path d="M340,605 L695,360 M695,360 L689.9,373.0 M695,360 L681.0,360.2" class="line"/>
+<rect x="1270" y="220" width="220" height="90" rx="0" class="box"/>
+<text x="1380.0" y="258" font-size="28" class="text" text-anchor="middle" font-weight="bold">R0</text>
+<text x="1380.0" y="290" font-size="20" class="dim" text-anchor="middle" font-weight="normal">right option</text>
+<path d="M1025,360 L1270,265 M1270,265 L1262.0,276.5 M1270,265 L1256.3,261.9" class="line"/>
+<rect x="1270" y="390" width="220" height="90" rx="0" class="box"/>
+<text x="1380.0" y="428" font-size="28" class="text" text-anchor="middle" font-weight="bold">R1</text>
+<text x="1380.0" y="460" font-size="20" class="dim" text-anchor="middle" font-weight="normal">right option</text>
+<path d="M1025,360 L1270,435 M1270,435 L1256.6,439.1 M1270,435 L1261.2,424.1" class="line"/>
+<rect x="1270" y="560" width="220" height="90" rx="0" class="box"/>
+<text x="1380.0" y="598" font-size="28" class="text" text-anchor="middle" font-weight="bold">R2</text>
+<text x="1380.0" y="630" font-size="20" class="dim" text-anchor="middle" font-weight="normal">right option</text>
+<path d="M1025,360 L1270,605 M1270,605 L1256.3,602.3 M1270,605 L1267.3,591.3" class="line"/>
+<text x="860" y="525" font-size="32" class="text" text-anchor="middle" font-weight="bold">L &lt; x &lt; R</text>
+<text x="860" y="590" font-size="28" class="text" text-anchor="middle" font-weight="normal">b(x) = 1 + max b(option)</text>
+<text x="860" y="642" font-size="21" class="dim" text-anchor="middle" font-weight="normal">empty cut { | } begins at birthday 0</text>
+<text x="60" y="760" font-size="24" class="dim" text-anchor="start" font-weight="normal">validate  /  compare  /  negate  /  add  /  multiply</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="830" viewBox="0 0 1720 830">
+<title>Cocytus self-hosting fixed point</title>
+<rect width="100%" height="100%" fill="#050505"/>
+<style>
+.text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#eeeeee; }
+.dim { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#9b9b9b; }
+.line { stroke:#d8d8d8; stroke-width:3; fill:none; shape-rendering:crispEdges; }
+.thin { stroke:#666; stroke-width:1; fill:none; shape-rendering:crispEdges; }
+.box { stroke:#d8d8d8; stroke-width:3; fill:#050505; }
+.pending { stroke:#777; stroke-width:3; fill:#050505; stroke-dasharray:12 8; }
+</style>
+<text x="60" y="70" font-size="38" class="text" text-anchor="start" font-weight="bold">COCYTUS 0.2.0 // TRUST BOUNDARY</text>
+<text x="60" y="108" font-size="20" class="dim" text-anchor="start" font-weight="normal">the C seed may start the chain; it may not remain the compiler</text>
+<rect x="70" y="185" width="285" height="105" class="box"/>
+<text x="212.5" y="225" font-size="27" class="text" text-anchor="middle" font-weight="bold">C0</text>
+<text x="212.5" y="258" font-size="19" class="dim" text-anchor="middle" font-weight="normal">visible C trust seed</text>
+<rect x="455" y="185" width="300" height="105" class="box"/>
+<text x="605.0" y="225" font-size="27" class="text" text-anchor="middle" font-weight="bold">S</text>
+<text x="605.0" y="258" font-size="19" class="dim" text-anchor="middle" font-weight="normal">compiler.coc</text>
+<rect x="855" y="185" width="300" height="105" class="box"/>
+<text x="1005.0" y="225" font-size="27" class="text" text-anchor="middle" font-weight="bold">C1</text>
+<text x="1005.0" y="258" font-size="19" class="dim" text-anchor="middle" font-weight="normal">stage-1 compiler</text>
+<rect x="1255" y="185" width="300" height="105" class="box"/>
+<text x="1405.0" y="225" font-size="27" class="text" text-anchor="middle" font-weight="bold">C2</text>
+<text x="1405.0" y="258" font-size="19" class="dim" text-anchor="middle" font-weight="normal">self-hosted compiler</text>
+<path d="M355,237 L455,237 M455,237 L442.5,245.4 M455,237 L442.5,228.6" class="line"/>
+<text x="405" y="215" font-size="17" class="dim" text-anchor="middle" font-weight="normal">feeds</text>
+<path d="M755,237 L855,237 M855,237 L842.5,245.4 M855,237 L842.5,228.6" class="line"/>
+<text x="805" y="215" font-size="17" class="dim" text-anchor="middle" font-weight="normal">C0(S)</text>
+<path d="M1155,237 L1255,237 M1255,237 L1242.5,245.4 M1255,237 L1242.5,228.6" class="line"/>
+<text x="1205" y="215" font-size="17" class="dim" text-anchor="middle" font-weight="normal">C1(S)</text>
+<rect x="700" y="440" width="320" height="110" class="box"/>
+<text x="860.0" y="480" font-size="27" class="text" text-anchor="middle" font-weight="bold">C3</text>
+<text x="860.0" y="513" font-size="19" class="dim" text-anchor="middle" font-weight="normal">C2(S)</text>
+<path d="M1410,290 L1010,440 M1010,440 L1018.7,427.8 M1010,440 L1024.6,443.5" class="line"/>
+<text x="1270" y="380" font-size="18" class="dim" text-anchor="middle" font-weight="normal">compile S again</text>
+<rect x="1120" y="440" width="450" height="110" class="pending"/>
+<text x="1345.0" y="480" font-size="27" class="text" text-anchor="middle" font-weight="bold">FIXED-POINT GATE</text>
+<text x="1345.0" y="513" font-size="19" class="dim" text-anchor="middle" font-weight="normal">bytes(C2) == bytes(C3)</text>
+<path d="M1020,495 L1120,495 M1120,495 L1107.5,503.4 M1120,495 L1107.5,486.6" class="line"/>
+<text x="1345" y="595" font-size="20" class="dim" text-anchor="middle" font-weight="normal">required before 0.2.0 may claim self-hosting</text>
+<text x="60" y="710" font-size="24" class="text" text-anchor="start" font-weight="normal">C0 is a trust seed.  C2/C3 are the proof boundary.</text>
+<text x="60" y="755" font-size="24" class="dim" text-anchor="start" font-weight="normal">A second language does not get to quietly finish the job.</text>
+</svg>

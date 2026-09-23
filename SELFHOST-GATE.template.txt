@@ -1,0 +1,21 @@
+COCYTUS 0.2.0 SELF-HOST GATE
+================================
+
+[ ] native compiler exists as real .coc source S
+[ ] C0 builds C1 from S
+[ ] C1 executes as a compiler
+[ ] C1 builds C2 from the same S
+[ ] C2 executes as a compiler
+[ ] C2 builds C3 from the same S
+[ ] C3 executes as a compiler
+[ ] C2 and C3 have equal file sizes
+[ ] C2 and C3 are byte-identical
+[ ] SHA-256(C2) == SHA-256(C3)
+[ ] C2 and C3 pass the same compiler/runtime regression gate
+[ ] no host-language compilation helper participates after C0
+[ ] proof paths and hashes recorded in SELFHOST-PROOF.md
+
+Only then:
+
+    self_hosted=yes
+    bootstrap_fixed_point=PASS
