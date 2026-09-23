@@ -1,0 +1,6 @@
+Cocytus 0.2.1
+Copyright 2026 Alexandru Moraru
+
+Project source and documentation are licensed under Apache License 2.0.
+The project links to the host-provided X11 runtime library for its optional
+interactive presentation backend. No X11 source or binary is redistributed.

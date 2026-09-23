@@ -1,0 +1,4 @@
+# Input byte x becomes (3*x+1) mod 256. EOF remains -1.
+antenora
+print
+halt

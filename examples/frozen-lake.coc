@@ -1,0 +1,12 @@
+# Exactly three accesses are legal. The third succeeds and freezes cell 9.
+judecca 9 3
+push 9 0
+push 65 0
+mstore
+push 9 0
+mload
+emit
+push 9 0
+mload
+print
+halt

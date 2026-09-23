@@ -1,0 +1,683 @@
+# Cocytus compiler, readable source.
+# It reads canonical Cocytus source from standard input and emits COC bytecode.
+# Its canonical twin is compiled by this program to reproduce the compiler image.
+
+var value 0 0
+var divisor 0 0
+var digit 0 0
+var complement 0 0
+var byte0 0 0
+var byte1 0 0
+var byte2 0 0
+var byte3 0 0
+var byte4 0 0
+var byte5 0 0
+var byte6 0 0
+var byte7 0 0
+var remaining 0 0
+var field 0 0
+var accumulator 0 0
+var sign 1 0
+jump main
+
+ptolomaea next_significant
+label significant_scan
+sourcebyte
+dup
+push 1 0
+neg
+eq
+jnz significant_eof
+dup
+push 35 0
+eq
+jnz significant_comment
+dup
+push 32 0
+eq
+jnz significant_space
+dup
+push 9 0
+eq
+jnz significant_space
+dup
+push 10 0
+eq
+jnz significant_space
+dup
+push 13 0
+eq
+jnz significant_space
+return
+label significant_space
+drop
+jump significant_scan
+label significant_comment
+drop
+label significant_comment_loop
+sourcebyte
+dup
+push 1 0
+neg
+eq
+jnz significant_eof
+dup
+push 10 0
+eq
+jnz significant_comment_done
+drop
+jump significant_comment_loop
+label significant_comment_done
+drop
+jump significant_scan
+label significant_eof
+return
+
+ptolomaea expect_image
+call next_significant
+push 105 0
+eq
+jz malformed
+sourcebyte
+push 109 0
+eq
+jz malformed
+sourcebyte
+push 97 0
+eq
+jz malformed
+sourcebyte
+push 103 0
+eq
+jz malformed
+sourcebyte
+push 101 0
+eq
+jz malformed
+sourcebyte
+push 32 0
+eq
+jz malformed
+return
+
+ptolomaea expect_native
+call next_significant
+push 110 0
+eq
+jz malformed
+sourcebyte
+push 97 0
+eq
+jz malformed
+sourcebyte
+push 116 0
+eq
+jz malformed
+sourcebyte
+push 105 0
+eq
+jz malformed
+sourcebyte
+push 118 0
+eq
+jz malformed
+sourcebyte
+push 101 0
+eq
+jz malformed
+sourcebyte
+push 32 0
+eq
+jz malformed
+return
+
+ptolomaea split_top
+store divisor
+push 0 0
+store digit
+load value
+load divisor
+push 64 0
+mul
+lt
+jnz split_top_after_64
+load value
+load divisor
+push 64 0
+mul
+sub
+store value
+load digit
+push 64 0
+add
+store digit
+label split_top_after_64
+load value
+load divisor
+push 32 0
+mul
+lt
+jnz split_top_after_32
+load value
+load divisor
+push 32 0
+mul
+sub
+store value
+load digit
+push 32 0
+add
+store digit
+label split_top_after_32
+load value
+load divisor
+push 16 0
+mul
+lt
+jnz split_top_after_16
+load value
+load divisor
+push 16 0
+mul
+sub
+store value
+load digit
+push 16 0
+add
+store digit
+label split_top_after_16
+load value
+load divisor
+push 8 0
+mul
+lt
+jnz split_top_after_8
+load value
+load divisor
+push 8 0
+mul
+sub
+store value
+load digit
+push 8 0
+add
+store digit
+label split_top_after_8
+load value
+load divisor
+push 4 0
+mul
+lt
+jnz split_top_after_4
+load value
+load divisor
+push 4 0
+mul
+sub
+store value
+load digit
+push 4 0
+add
+store digit
+label split_top_after_4
+load value
+load divisor
+push 2 0
+mul
+lt
+jnz split_top_after_2
+load value
+load divisor
+push 2 0
+mul
+sub
+store value
+load digit
+push 2 0
+add
+store digit
+label split_top_after_2
+load value
+load divisor
+push 1 0
+mul
+lt
+jnz split_top_after_1
+load value
+load divisor
+push 1 0
+mul
+sub
+store value
+load digit
+push 1 0
+add
+store digit
+label split_top_after_1
+load digit
+return
+ptolomaea split_digit
+store divisor
+push 0 0
+store digit
+load value
+load divisor
+push 128 0
+mul
+lt
+jnz split_digit_after_128
+load value
+load divisor
+push 128 0
+mul
+sub
+store value
+load digit
+push 128 0
+add
+store digit
+label split_digit_after_128
+load value
+load divisor
+push 64 0
+mul
+lt
+jnz split_digit_after_64
+load value
+load divisor
+push 64 0
+mul
+sub
+store value
+load digit
+push 64 0
+add
+store digit
+label split_digit_after_64
+load value
+load divisor
+push 32 0
+mul
+lt
+jnz split_digit_after_32
+load value
+load divisor
+push 32 0
+mul
+sub
+store value
+load digit
+push 32 0
+add
+store digit
+label split_digit_after_32
+load value
+load divisor
+push 16 0
+mul
+lt
+jnz split_digit_after_16
+load value
+load divisor
+push 16 0
+mul
+sub
+store value
+load digit
+push 16 0
+add
+store digit
+label split_digit_after_16
+load value
+load divisor
+push 8 0
+mul
+lt
+jnz split_digit_after_8
+load value
+load divisor
+push 8 0
+mul
+sub
+store value
+load digit
+push 8 0
+add
+store digit
+label split_digit_after_8
+load value
+load divisor
+push 4 0
+mul
+lt
+jnz split_digit_after_4
+load value
+load divisor
+push 4 0
+mul
+sub
+store value
+load digit
+push 4 0
+add
+store digit
+label split_digit_after_4
+load value
+load divisor
+push 2 0
+mul
+lt
+jnz split_digit_after_2
+load value
+load divisor
+push 2 0
+mul
+sub
+store value
+load digit
+push 2 0
+add
+store digit
+label split_digit_after_2
+load value
+load divisor
+push 1 0
+mul
+lt
+jnz split_digit_after_1
+load value
+load divisor
+push 1 0
+mul
+sub
+store value
+load digit
+push 1 0
+add
+store digit
+label split_digit_after_1
+load digit
+return
+ptolomaea emit_byte
+load complement
+jz emit_byte_direct
+push 255 0
+swap
+sub
+label emit_byte_direct
+emit
+return
+
+ptolomaea emit_u64
+store value
+push 0 0
+store complement
+load value
+push 0 0
+lt
+jz emit_u64_positive
+load value
+push 1 0
+add
+neg
+store value
+push 1 0
+store complement
+label emit_u64_positive
+push 72057594037927936 0
+call split_top
+store byte7
+push 281474976710656 0
+call split_digit
+store byte6
+push 1099511627776 0
+call split_digit
+store byte5
+push 4294967296 0
+call split_digit
+store byte4
+push 16777216 0
+call split_digit
+store byte3
+push 65536 0
+call split_digit
+store byte2
+push 256 0
+call split_digit
+store byte1
+load value
+store byte0
+load byte0
+call emit_byte
+load byte1
+call emit_byte
+load byte2
+call emit_byte
+load byte3
+call emit_byte
+load byte4
+call emit_byte
+load byte5
+call emit_byte
+load byte6
+call emit_byte
+load byte7
+call emit_byte
+return
+
+ptolomaea next_number
+label scan
+sourcebyte
+dup
+push 1 0
+neg
+eq
+jnz end_of_input
+dup
+push 35 0
+eq
+jnz skip_comment
+dup
+push 48 0
+lt
+jnz maybe_minus
+dup
+push 57 0
+gt
+jnz skip_character
+push 48 0
+sub
+store accumulator
+push 1 0
+store sign
+jump more_digits
+label maybe_minus
+dup
+push 45 0
+eq
+jz skip_character
+drop
+sourcebyte
+dup
+push 48 0
+lt
+jnz skip_character
+dup
+push 57 0
+gt
+jnz skip_character
+push 48 0
+sub
+store accumulator
+push 1 0
+neg
+store sign
+label more_digits
+sourcebyte
+dup
+push 48 0
+lt
+jnz number_done
+dup
+push 57 0
+gt
+jnz number_done
+push 48 0
+sub
+load accumulator
+push 10 0
+mul
+add
+store accumulator
+jump more_digits
+label number_done
+drop
+load accumulator
+load sign
+mul
+return
+label skip_character
+drop
+jump scan
+label skip_comment
+drop
+label comment_loop
+sourcebyte
+dup
+push 1 0
+neg
+eq
+jnz end_of_input
+dup
+push 10 0
+eq
+jnz comment_done
+drop
+jump comment_loop
+label comment_done
+drop
+jump scan
+label end_of_input
+drop
+push 1 1
+return
+
+label main
+call expect_image
+call next_number
+dup
+push 1 1
+eq
+jnz malformed
+dup
+push 0 0
+gt
+jz malformed
+store remaining
+
+push 67 0
+emit
+push 79 0
+emit
+push 67 0
+emit
+push 49 0
+emit
+push 1 0
+emit
+push 0 0
+emit
+push 0 0
+emit
+push 0 0
+emit
+load remaining
+call emit_u64
+
+label instruction_loop
+load remaining
+push 0 0
+eq
+jnz finished
+call expect_native
+push 0 0
+store field
+
+label field_loop
+call next_number
+dup
+push 1 1
+eq
+jnz malformed
+load field
+push 0 0
+eq
+jnz emit_single
+load field
+push 1 0
+eq
+jnz emit_exponent
+call emit_u64
+jump field_done
+
+label emit_single
+dup
+push 1 0
+lt
+jnz malformed
+dup
+push 31 0
+gt
+jnz malformed
+emit
+jump field_done
+
+label emit_exponent
+dup
+push 0 0
+lt
+jnz malformed
+dup
+push 255 0
+gt
+jnz malformed
+emit
+push 0 0
+emit
+push 0 0
+emit
+push 0 0
+emit
+push 0 0
+emit
+push 0 0
+emit
+push 0 0
+emit
+
+label field_done
+load field
+push 1 0
+add
+dup
+store field
+push 7 0
+lt
+jnz field_loop
+load remaining
+push 1 0
+sub
+store remaining
+jump instruction_loop
+
+label finished
+call next_number
+push 1 1
+eq
+jz malformed
+halt
+
+label malformed
+push 256 0
+emit
+halt

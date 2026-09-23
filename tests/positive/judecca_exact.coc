@@ -1,0 +1,8 @@
+judecca 1 2
+push 1 0
+push 90 0
+mstore
+push 1 0
+mload
+emit
+halt

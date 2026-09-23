@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="880" viewBox="0 0 1720 880">
+<title>Compiler fixed point mathematics</title>
+<rect width="100%" height="100%" fill="#050505"/>
+<style>
+.text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#eeeeee; }
+.dim { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; fill:#9b9b9b; }
+.line { stroke:#d8d8d8; stroke-width:3; fill:none; shape-rendering:crispEdges; }
+.thin { stroke:#666; stroke-width:1; fill:none; shape-rendering:crispEdges; }
+.box { stroke:#d8d8d8; stroke-width:3; fill:#050505; }
+.pending { stroke:#777; stroke-width:3; fill:#050505; stroke-dasharray:12 8; }
+</style>
+<text x="60" y="70" font-size="38" class="text" text-anchor="start" font-weight="bold">BOOTSTRAP AS A FIXED POINT</text>
+<text x="60" y="110" font-size="20" class="dim" text-anchor="start" font-weight="normal">not: P prints text(P)    //    instead: compiler reproduces compiler through S</text>
+<rect x="110" y="230" width="390" height="120" class="box"/>
+<text x="305.0" y="270" font-size="27" class="text" text-anchor="middle" font-weight="bold">Φ(C) = C(S)</text>
+<text x="305.0" y="303" font-size="19" class="dim" text-anchor="middle" font-weight="normal">compile native compiler source S</text>
+<rect x="665" y="230" width="390" height="120" class="box"/>
+<text x="860.0" y="270" font-size="27" class="text" text-anchor="middle" font-weight="bold">C*</text>
+<text x="860.0" y="303" font-size="19" class="dim" text-anchor="middle" font-weight="normal">candidate self-hosted compiler</text>
+<rect x="1220" y="230" width="390" height="120" class="box"/>
+<text x="1415.0" y="270" font-size="27" class="text" text-anchor="middle" font-weight="bold">Φ(C*)</text>
+<text x="1415.0" y="303" font-size="19" class="dim" text-anchor="middle" font-weight="normal">compile S with C*</text>
+<path d="M500,290 L665,290 M665,290 L652.5,298.4 M665,290 L652.5,281.6" class="line"/>
+<path d="M1055,290 L1220,290 M1220,290 L1207.5,298.4 M1220,290 L1207.5,281.6" class="line"/>
+<text x="860" y="450" font-size="25" class="dim" text-anchor="middle" font-weight="normal">fixed point iff</text>
+<text x="860" y="505" font-size="40" class="text" text-anchor="middle" font-weight="bold">Φ(C*) = C*</text>
+<text x="860" y="570" font-size="27" class="text" text-anchor="middle" font-weight="normal">operational witness:  C2 = C3  byte-for-byte</text>
+<text x="860" y="625" font-size="24" class="dim" text-anchor="middle" font-weight="normal">and therefore SHA-256(C2) = SHA-256(C3)</text>
+<rect x="150" y="705" width="590" height="105" class="box"/>
+<text x="445.0" y="745" font-size="27" class="text" text-anchor="middle" font-weight="bold">ORDINARY QUINE</text>
+<text x="445.0" y="778" font-size="19" class="dim" text-anchor="middle" font-weight="normal">program -&gt; its own text</text>
+<rect x="980" y="705" width="590" height="105" class="box"/>
+<text x="1275.0" y="745" font-size="27" class="text" text-anchor="middle" font-weight="bold">COCYTUS BOOTSTRAP</text>
+<text x="1275.0" y="778" font-size="19" class="dim" text-anchor="middle" font-weight="normal">compiler -&gt; same executable compiler</text>
+</svg>

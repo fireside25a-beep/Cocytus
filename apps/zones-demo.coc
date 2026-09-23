@@ -1,0 +1,29 @@
+# All four Cocytus zones in one executable native program.
+jump entry
+
+ptolomaea double
+dup
+add
+return
+
+label entry
+judecca 42 2
+push 42 0
+push 21 0
+mstore
+push 42 0
+mload
+call double
+print
+drop
+antenora
+print
+clear 65795
+rect 48 48 544 304 986895
+rect 72 72 496 256 1252128
+text 110 105 4 16053492 COCYTUS
+text 116 160 2 13993316 CAINA ANTENORA
+text 116 196 2 4738534 PTOLOMAEA JUDECCA
+text 116 250 2 10399196 EXACT DYADIC FROZEN LAKE
+caina
+halt

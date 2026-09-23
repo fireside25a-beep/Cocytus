@@ -1,0 +1,6 @@
+judecca 3 1
+push 3 0
+mload
+push 3 0
+mload
+halt
