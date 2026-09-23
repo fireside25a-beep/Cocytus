@@ -179,9 +179,6 @@ SHA-256(C2) == SHA-256(C3)       MUST PASS
   <img src="release-gate-020.svg" width="100%" alt="Cocytus 0.2 release gate">
 </p>
 
-NFO
-
-The complete old-school release note and machine description is here:
 
 COCYTUS.NFO.md
 
